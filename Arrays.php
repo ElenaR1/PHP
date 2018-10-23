@@ -177,3 +177,166 @@ $data = [ 'webgl' => ['title' => 'Компютърна графика с WebGL',
 
 
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+---------------------------------------------------------------------------------------------------
+	//adding a file
+<?php
+function __autoload($className) {
+	$fileName = "{$className}.php";
+	if (file_exists($fileName)) {
+		require_once $className. '.php';
+	} else {
+		// nema
+	}
+}
+
+use code2\User;
+	//include 'work2.php';
+	//require_once 'work2.php';
+	//require_once 'work2.php';
+	//declare(strict_types=1);
+	//require_once"work2/sn.php";
+	/*spl_autoload_register(function($className){ // самозарежда всичко,
+	include $className . '.php'; // което ни потрябва
+});*/
+	
+	//use work2;
+?>
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	
+	<body>
+	
+	<?php
+		include "81296Electives.php";
+	?>
+		<p>
+    	<?php
+		//$vars = new work3("akka"); 
+
+		$user=new User("123a","gosho");
+		echo $user->getName();
+		
+		/*$mes="hi, {$user->getName()} with id {$user->getId()}";
+		echo $mes;*/
+		?>
+		
+		</p>
+	</body>
+
+
+</html>
+
+	
+	//User koito e v papkata code2 v code
+<?php
+namespace code2;
+	class User
+	{
+		private $id;
+		private $name;
+		//konstruktor
+		public function __construct(string $id,string $name)
+		{
+			$this->id=$id;//taka se referira poleto
+			$this->name=$name;
+		}
+		
+		public function getId():string
+		{
+			return $this->id;
+		}
+		public function getName():string
+		{
+			return $this->name;
+		}
+	}
+	
+	
+-------------------------------------------------------------------
+	// i s file v sushtatadirektoriq
+<?php
+function __autoload($className) {
+	$fileName = "{$className}.php";
+	if (file_exists($fileName)) {
+		require_once $className. '.php';
+	} else {
+		echo "err";
+		// nema
+	}
+}
+//use \work3;
+//use code2\User;
+	//include 'work2.php';
+	//require_once 'work2.php';
+	//require_once 'work2.php';
+	//declare(strict_types=1);
+	//require_once"work2/sn.php";
+	/*spl_autoload_register(function($className){ // самозарежда всичко,
+	include $className . '.php'; // което ни потрябва
+});*/
+	
+	//use work2;
+?>
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	
+	<body>
+	
+	<?php
+		//include "81296Electives.php";
+	?>
+		<p>
+    	<?php
+		$vars = new work3("akka"); 
+		echo $vars->gets();
+
+		//$user=new User("123a","gosho");
+		//echo $user->getName();
+		
+		/*$mes="hi, {$user->getName()} with id {$user->getId()}";
+		echo $mes;*/
+		?>
+		
+		</p>
+	</body>
+
+
+</html>
+
+	
+	//2riq file:
+<?php
+//namespace \;
+	echo "lalalall";
+	class work3 {
+		private $data;
+    function __construct(string $d) {
+        $this->data =$d;
+    }
+	public function gets(): string
+	{
+		return $this->data;
+	}
+}
+?>
+	
+	
