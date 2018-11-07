@@ -127,7 +127,23 @@ echo $handler->lastInsertId();
 
 
 
+$sql="select * from mytable1 where password=?";
+$stmt = $conn->prepare($sql);
+$stmt->execute(['fff']);
+//$stmt->execute(['abcfd']);
+//$rows = $stmt->fetch();
+while($r=$stmt->fetch())
+{
+	//echo print_r($r).'<br>';//Array ( [id] => 0 [0] => 0 [username] => john [1] => john [password] => 12345 [2] => 12345 ) 1
+	echo $r['username'].'<br>';
+}
 
+$sql2="insert into mytable1(id,username,password) values(3,:name,:pass)";
+$stmt = $conn->prepare($sql2);
+$id='3';
+$name="henry";
+$pass="popo";
+$stmt->execute(array(':name'=>$name,':pass'=>$pass));
 
 
 
