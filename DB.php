@@ -146,7 +146,118 @@ $pass="popo";
 $stmt->execute(array(':name'=>$name,':pass'=>$pass));
 
 
+?>
 
+
+
+--LOGIN FORM WITH DB 
+<?php
+
+class Connection{
+	public function dbConnect()
+	{
+		return new PDO('mysql:host=localhost;dbname=testdb','root','');
+	}
+}
 
 
 ?>
+
+<?php
+
+include_once('connection.php');
+
+	class User
+	{
+		private $db;
+
+		public function __construct()
+		{
+			$this->db=new connection();
+			$this->db=$this->db->dbConnect();
+		}
+		public function login($n,$p)
+		{
+
+			if(!empty($n)&&!empty($p))
+			{
+				$st=$this->db->prepare("select * from users where name=? and pass=?");
+				//$st->bindParam(1,$name);
+				//$st->bindParam(2,$pass);
+				$st->execute([$n,$p]);
+				
+				if ($st->rowCount()==1)
+				{
+					echo 'user verified';
+				}
+				else
+					echo 'not';
+				
+				}
+			else
+			{
+				"enter".'<br>';
+			}
+		}
+		
+	}
+
+
+
+
+
+<?php
+
+include_once('user.php');
+
+if(isset($_POST['submit']))
+{
+	$name=$_POST['user'];
+	$pass=$_POST['pass'];
+	$object=new User();
+	$object->Login($name,$pass);
+}
+
+?>
+
+
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	
+	<body>
+	<form method="post" action="index.php">
+	Name: <input type="text" name="user" />   
+	Password: <input type="text" name="pass" />  
+	<input type="submit" name="submit"/> <!--this gives me a submit button. Whenever we submit it it's gonna make a variable called name and it's gonna go to testerpage -->
+	
+	</form>
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
