@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <title>Course form</title>
+    
+    <body>
+        <form action="validate.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="courseID">Име на предмет: </label></td>
+                    <td><input type="text" name="courseID" id="courseID" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lecturerName">Преподавател: </label></td>
+                    <td><input type="text" name="lecturer" id="lecturerName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="description">Описание на курс: </label></td>
+                    <td><input type="text" name="description" id="description" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Добави курс">
+        </form>
+    </body>
+</html>
