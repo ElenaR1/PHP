@@ -89,8 +89,14 @@ p.para11{
   border-bottom: 1px solid gray;
 }
 .registerbtn1{
-	float:top;
-	left:400px;
+	position:relative;
+	left:1040px;
+	top:-750px;
+}
+.registerbtn2{
+	position:relative;
+	left:1050px;
+	top:-750px;
 }
 
 .textbox{
