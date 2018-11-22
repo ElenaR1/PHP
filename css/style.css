@@ -175,10 +175,10 @@ p.para11{
     padding-left: 2px;
     border: none;
     cursor: pointer;
-    width: 4%;
+    width: 5%;
     opacity: 0.9;
 	position: absolute;
-	right: 160px;
+	right: 260px;
 	top: 5px; 
 	border-radius: 8px;	
 	
@@ -187,30 +187,17 @@ p.para11{
     background-color: yellowgreen;
     color: white;
     padding-top: 10px;
-    padding-right: 2px;
+    padding-right: 4px;
     padding-bottom: 10px;
-    padding-left: 2px;
+    padding-left: 4px;
     border: none;
     cursor: pointer;
-    width: 7%;
+    width: 8%;
     opacity: 0.9;
 	position: absolute;
-	right: 50px;
+	right: 135px;
 	top: 5px; 
-	border-radius: 8px;
-}
-.registerbtn2 {
-    background-color: yellowgreen;
-	 border: 3px solid white;
-    color: white;
-    padding-top: 10px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-	float: right;
-    cursor: pointer;
-    width: 7%;
-    opacity: 0.9;
+	border-radius: 9px;
 }
 
 ul{
