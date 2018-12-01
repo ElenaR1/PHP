@@ -1,0 +1,35 @@
+
+body{
+
+width: 1000px;
+margin:auto;
+position:relative;
+
+}
+
+input[type=text]{
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+	width:300px;
+	height:10px;
+	border:dimgray ;
+}
+
+/*register*/
+.container{
+	background:silver;
+	width:400px;
+	margin: 0px 0px 0px 300px;
+	padding-bottom:20px;
+}
+h1{
+	text-align:center;
+	background-color:green;
+	padding-bottom
+}
+
+.button{
+	padding: 7px;
+	width:320px;
+}
