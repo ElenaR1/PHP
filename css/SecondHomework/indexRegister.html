@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+<link href="styleRegister.css" rel="stylesheet">
+<head>
+<meta charset="utf-8">
+<title> Registration form </title>
+
+</head>
+
+<body>
+		
+		 <div class="container">	
+		 <h1>РЕГИСТРАЦИЯ</h1>
+		 </br>
+		 <form id="register" method="POST" action="" style="margin-left:40px; margin-right:40px; ">
+		<input type="text" name="E-mail" placeholder="E-mail" required>
+		</br>
+		<input type="text" name="name" placeholder="Име" required>
+		</br>
+		<input type="text" name="surname" placeholder="Фамилия" required>
+		</br>
+		<input id="password" name="password" type="password" pattern="^\S{5,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ?
+		'Паролата трябва да бъде от поне 5 символа' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Парола" required>
+		</br>
+		<input id="password_two" name="password_two" type="password" pattern="^\S{5,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 
+		'Моля въведете същата парола' : '');" placeholder="Повтори паролата" required>
+		
+		<button class="button">Регистрация</button>
+		</form>
+		 </div>
+</body>
+
+
+</html>
