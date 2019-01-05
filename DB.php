@@ -135,6 +135,7 @@ $stmt->execute(['fff']);
 while($r=$stmt->fetch())
 {
 	//echo print_r($r).'<br>';//Array ( [id] => 0 [0] => 0 [username] => john [1] => john [password] => 12345 [2] => 12345 ) 1
+	echo  $row[0] . " | " . $row[1] . " | " . $row[2] . "<br/>";
 	echo $r['username'].'<br>';
 }
 
