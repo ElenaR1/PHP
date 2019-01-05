@@ -132,6 +132,8 @@ $stmt = $conn->prepare($sql);
 $stmt->execute(['fff']);
 //$stmt->execute(['abcfd']);
 //$rows = $stmt->fetch();
+//echo "a: "; print_r($stmt->fetch()); echo '<br/>';
+
 while($r=$stmt->fetch())
 {
 	//echo print_r($r).'<br>';//Array ( [id] => 0 [0] => 0 [username] => john [1] => john [password] => 12345 [2] => 12345 ) 1
