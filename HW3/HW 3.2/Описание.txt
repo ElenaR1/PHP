@@ -1,5 +1,0 @@
-Тъй като имам доста файлове прикачвам и последователността на изпълнението им:
-index3.php -> secondindex.php -> thirdindex.php ->update.php.
-В user3.php намирам от таблицата данните с посоченото id.
-В thirdindexUser.php  update-вам данните с посоченото id. 
-
