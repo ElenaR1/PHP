@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<title>Form</title>
+        <script src="validate.js"></script>
+    </head>
+
+    <body>
+			<form action="register.php" method="post" onsubmit="return validate()">		
+
+			<div id="div1">
+			</div>	
+			
+			<p>
+			   <label for="username">Име: </label>
+			   <input type="text" id="username" name="" required />
+			</p>
+			
+			<p>
+			   <label for="pass">Парола: </label>
+			   <input type="password" id="pass" name="" required />
+			</p>
+			
+			<p>
+				<label for="rep_pass">Повтори паролата:</label>
+				<input type="password" id="rep_pass" name="" required />
+			</p>
+
+			<input type="submit" value="Регистрация" name="formSubmit" />
+			</form>
+    </body>
+</html>
